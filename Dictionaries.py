@@ -2,7 +2,7 @@
 contact_dict = {
             "Lee":{
             "Full Name": "Lee Seokmin",
-            "Age": 25,
+            "Age": "25",
             "Address": "Japan",
             "Contact Number": "09876543211",
             "Organization/Group": "Seventeen",
@@ -16,7 +16,7 @@ print(contact_dict)
 print("\nMenu: \n"
       "1 -> Add an item\n"
       "2 -> Search \n"
-      "3-> Exit (Yes or No)\n\n")
+      "3 -> Exit (Yes or No)\n\n")
 
 # Allow user to select item in the menu (check if valid)
 # Perform the selected option
