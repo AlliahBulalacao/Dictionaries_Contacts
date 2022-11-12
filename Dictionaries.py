@@ -1,15 +1,17 @@
 # Dictionary
-name = input("Full Name: ")
-contact_info = {
-            "Full Name: ": name,
-            "Age: ": 25,
-            "Address:": "Japan",
-            "Contact Number:": "09876543211",
-            "Organization/Group:": "Seventeen",
+contact_dict = {
+            "Lee":{
+            "Full Name": "Lee Seokmin",
+            "Age": 25,
+            "Address": "Japan",
+            "Contact Number": "09876543211",
+            "Organization/Group": "Seventeen",
             "Birthday": "February 18, 1997",
             "Fully Vaccinated (Yes or No)": "Yes"
-}
-print(contact_info)
+}}
+
+
+print(contact_dict)
 
 
 # Display a menu of options
@@ -24,25 +26,32 @@ while True:
       select = input("Select your chosen menu (1-3): ")
 
       if select == '1':
+            print("=====CONTACT TRACING INFORMATION=====")
             name = input("Full name: ")
-            contact = int(input("Contact Information: "))
+            contact = int(input("Contact Number: "))
             age = int(input("Age: "))
             address = input("Address: ")
             org = input("Organization: ")
             bday = input("Birthday: ")
-            vacci_status = input("Newly added Fully Vaccinated (Yes or No): ")
+            vacci_status = input("Fully Vaccinated (Yes or No): ")
 
-            info = {"Contact Information": contact,
-                    "Age": age,
-                    "Address": address,
-                    "Organization": org
-                    }
-            information = {
-                  "Newly added Full name": name,
-                  "Newly added Personal Info": info
+            new_info_dict = {"Full Name": name,
+                  "Contact Number": contact,
+                  "Age": age,
+                  "Address": address,
+                  "Organization": org,
+                  "Birthday": bday,
+                  "Vaccination Status": vacci_status
             }
-            option_1 = information.update({"alliah":19})
-            print(option_1)
+            print(new_info_dict)
+            contact_dict.update(new_info_dict)
+            print("Contact Information:", contact_dict)
 
-      if select == "2":
+      elif select == '2':
+            print("=====CONTACT TRACING INFORMATION=====")
+            search = input("Whose record do you want to find? ")
+            for search in contact_dict:
+                  print(search, contact_dict[search])
+
+
 
